@@ -397,7 +397,7 @@ margin:10px;
     <img width="500px" src="{{ asset('contin-01.png') }}" alt="">
     <br/>
 
-    <img width="500px" src="{{ asset('documents.jpeg') }}" alt="">
+    <img width="500px" src="{{ asset('documentsup.jpeg') }}" alt="">
     </div>
 
 
