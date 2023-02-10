@@ -350,7 +350,7 @@ margin:10px;
         <img src="{{ asset('es-01.png') }}" alt="">
         <br>
         <br>
-        <img style="margin-top: 10px;width: 445px;" src="{{ asset('tenda-01.png') }}" alt="">
+        <img style="margin-top: 10px;    max-width: 445px;" src="{{ asset('tenda-01.png') }}" alt="">
     </div>
     </div>
     <div id="Content" class="wrapper">
@@ -377,7 +377,7 @@ margin:10px;
     <div class="footer" style="text-align: center">
 
 
-        <img src="{{ asset('footer-01.png') }}" alt="">
+        <img width="100%" src="{{ asset('footer-01.png') }}" alt="">
 
 
     </div>
@@ -401,7 +401,7 @@ margin:10px;
 
 <script>
     // Set the date we're counting down to
-    var countDownDate = new Date("Feb 19, 2023 09:00:00").getTime();
+    var countDownDate = new Date("Feb 16, 2023 09:00:00").getTime();
 
     // Update the count down every 1 second
     var x = setInterval(function() {
