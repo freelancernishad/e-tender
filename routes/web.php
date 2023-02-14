@@ -44,7 +44,7 @@ Route::get('/', function () {
 
    if($currentDate>$EndDate){
 
-       return 'end';
+       return '<h1 style="text-align:center;margin-top:20px;color:red">দরপত্র দাখিলের সময় শেষ</h1>';
     }
 
    if($currentDate>$startDate){
