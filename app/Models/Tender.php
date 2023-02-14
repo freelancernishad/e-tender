@@ -9,12 +9,17 @@ class Tender extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'email',
+        'dorId',
         'applicant_orgName',
-        'address',
+        'applicant_org_fatherName',
+        'vill',
+        'postoffice',
+        'thana',
+        'distric',
         'mobile',
+        'DorAmount',
+        'DorAmountText',
         'depositAmount',
-        'amount',
         'bank_draft_image',
         'deposit_details',
     ];

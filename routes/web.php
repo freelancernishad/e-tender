@@ -20,12 +20,24 @@ use Illuminate\Support\Facades\Session;
 
 Route::get('/', function () {
 
+
+
+    $tenderCount =  Tender::count();
+    if($tenderCount>0){
+        $tender = Tender::orderBy('id','desc')->first();
+        $dorId = $tender->dorId+1;
+    }else{
+        $dorId = 120001;
+    }
+
+
+
     // return view('form');
      $currentDate = date("d-m-Y H:i:s");
 
-    $startDate = date("d-m-Y H:i:s",strtotime('16-02-2023 09:00:00'));
+    $startDate = date("d-m-Y H:i:s",strtotime(env('STARTFORM')));
 
-    $EndDate = date("d-m-Y H:i:s",strtotime('16-02-2023 14:00:00'));
+    $EndDate = date("d-m-Y H:i:s",strtotime(env('ENDFORM')));
 
 
 
@@ -37,7 +49,7 @@ Route::get('/', function () {
 
    if($currentDate>$startDate){
 
-       return view('form');
+       return view('form',compact('dorId'));
     }else{
 
         return view('countdown');
@@ -52,11 +64,15 @@ Route::get('/', function () {
 
 Route::post('/form/submit', function (Request $request) {
 
-    $emailcheck = Tender::where('email',$request->email)->count();
- if($emailcheck>0){
-    Session::flash('Smessage', 'Task was successful!');
-    return redirect()->back();
- }
+
+//    return $request->all();
+
+
+//     $emailcheck = Tender::where('mobile',$request->mobile)->count();
+//  if($emailcheck>0){
+//     Session::flash('Fmessage', 'আপনি ইতিমধ্যে দরপত্র দাখিল করেছেন');
+//     return redirect()->back();
+//  }
 
 
 
@@ -81,6 +97,8 @@ Route::post('/form/submit', function (Request $request) {
     $data['deposit_details'] = $deposit_details;
 
   Tender::create($data);
+  Session::flash('Smessage', 'আপনার দরপত্রটি দাখিল হয়েছে');
+  return redirect()->back();
 
 
 });

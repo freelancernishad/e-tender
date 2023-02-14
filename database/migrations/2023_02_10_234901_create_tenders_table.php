@@ -15,12 +15,17 @@ class CreateTendersTable extends Migration
     {
         Schema::create('tenders', function (Blueprint $table) {
             $table->id();
-            $table->string('email')->nullable();
+            $table->string('dorId')->nullable();
             $table->string('applicant_orgName')->nullable();
-            $table->string('address')->nullable();
+            $table->string('applicant_org_fatherName')->nullable();
+            $table->string('vill')->nullable();
+            $table->string('postoffice')->nullable();
+            $table->string('thana')->nullable();
+            $table->string('distric')->nullable();
             $table->string('mobile')->nullable();
+            $table->string('DorAmount')->nullable();
+            $table->string('DorAmountText')->nullable();
             $table->string('depositAmount')->nullable();
-            $table->string('amount')->nullable();
             $table->string('bank_draft_image')->nullable();
             $table->string('deposit_details')->nullable();
 
