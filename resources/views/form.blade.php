@@ -256,7 +256,7 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" for="DorAmount">দরের পরিমাণ (টাকা)</label>
+          <label class="mb-1" for="DorAmount">দাখিলকৃত দরের পরিমাণ (টাকা)</label>
           <input type="text" class="form-control" id="DorAmount" name="DorAmount" required>
         </div>
     </div>
@@ -272,7 +272,7 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" for="depositAmount">৩০% জামানত হিসেবে ব্যাংক ড্রাফট/পে অর্ডারের পরিমাণ</label>
+          <label class="mb-1" for="depositAmount">৩০% জামানত হিসেবে ব্যাংক ড্রাফট/পে অর্ডারের পরিমাণ (টাকা)</label>
           <input type="text" class="form-control" id="depositAmount" name="depositAmount" required>
         </div>
     </div>
