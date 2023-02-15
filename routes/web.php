@@ -82,14 +82,14 @@ Route::post('/form/submit', function (Request $request) {
     $bank_draft_image = $request->file('bank_draft_image');
     $extension = $bank_draft_image->getClientOriginalExtension();
     $path = public_path('files/bank_draft_image/');
-    $fileName = uniqid().'.'.$extension;
+    $fileName = $request->dorId.'-'.uniqid().'.'.$extension;
     $bank_draft_image->move($path, $fileName);
     $bank_draft_image = asset('files/bank_draft_image/'.$fileName);
 
     $deposit_details = $request->file('deposit_details');
     $extension = $deposit_details->getClientOriginalExtension();
     $path = public_path('files/deposit_details/');
-    $fileName = uniqid().'.'.$extension;
+    $fileName = $request->dorId.'-'.uniqid().'.'.$extension;
     $deposit_details->move($path, $fileName);
     $deposit_details = asset('files/deposit_details/'.$fileName);
 
@@ -103,6 +103,67 @@ Route::post('/form/submit', function (Request $request) {
 
 });
 
+Route::get('/pdf/sder/download', function (Request $request) {
+
+$html = '
+<style>
+td{
+    border: 1px solid black;
+    padding:4px 10px;
+    font-size: 14px;
+}    th{
+    border: 1px solid black;
+    padding:4px 10px;
+    font-size: 14px;
+}
+</style>
+    <p style="text-align:center;font-size:25px">দরপত্র দাখিল কারীর তালিকা</p>
+
+
+<table class="table" border="1" style="border-collapse: collapse;width:100%">
+<thead>
+    <tr>
+    <td>দরপত্র নম্বর</td>
+    <td>নাম</td>
+    <td>পিতার নাম</td>
+    <td>ঠিকানা</td>
+    <td>মোবাইল</td>
+    <td>দরের পরিমাণ</td>
+    <td>কথায়</td>
+    <td>জামানতের পরিমাণ</td>
+    </tr>
+</thead>
+<tbody>';
+        $tenders = Tender::all();
+    foreach ($tenders as $application) {
+
+
+    $html .= " <tr>
+        <td>$application->dorId</td>
+        <td>$application->applicant_orgName</td>
+        <td>$application->applicant_org_fatherName</td>
+        <td>গ্রাম- $application->vill, ডাকঘর- $application->postoffice, উপজেলা- $application->thana, জেলা- $application->distric</td>
+        <td>$application->mobile</td>
+        <td>$application->DorAmount</td>
+        <td>$application->DorAmountText</td>
+        <td>$application->depositAmount</td>
+    </tr>";
+}
+
+
+    $html .= '
+
+</tbody>
+</table>
+
+
+
+';
+   return PdfMaker('A4',$html,'list',false);
+
+
+
+});
 
 
 

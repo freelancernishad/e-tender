@@ -3,6 +3,8 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use  App\Http\Controllers\api\authController;
+use App\Models\Tender;
+
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -47,4 +49,12 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
             Route::get('users/deleted/', [authController::class, 'deleted']);
             Route::get('users/{id}', [authController::class, 'show']);
         });
+        Route::get('get/all/aplications', function () {
+          return Tender::all();
+        });
+
+
+
+
+
     });

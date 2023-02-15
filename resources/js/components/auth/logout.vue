@@ -7,13 +7,24 @@ export default {
 	created(){
 		localStorage.removeItem('token')
 		localStorage.removeItem('user')
-
-		Toast.fire({
+        Toast.fire({
 			icon: 'success',
 			title: 'Logout in successfully'
 		})
+        axios.post('/logout').then(()=>{
 
-		this.$router.push({name: '/'})
+    if(this.$route.query.redirect){
+
+        window.location.href = '/login?redirect='+this.$route.query.redirect
+    }else{
+
+        window.location.href = '/login'
+    }
+    })
+
+
+        // window.location.href='/login'
+		// this.$router.push({name: '/'})
 	}
 }
 </script>
