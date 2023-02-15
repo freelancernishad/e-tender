@@ -55,9 +55,9 @@
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-                    @if (Route::has('register'))
+                    {{-- @if (Route::has('register'))
 					Don't have an account?<a href="{{ route('register') }}">Sign Up</a>
-                    @endif
+                    @endif --}}
 				</div>
 				<div class="d-flex justify-content-center">
                     @if (Route::has('password.request'))
