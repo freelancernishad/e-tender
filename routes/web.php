@@ -33,17 +33,16 @@ Route::get('/', function () {
 
 
     // return view('form');
-     $currentDate = date("d-m-Y H:i:s");
+      $currentDate = strtotime(date("d-m-Y H:i:s"));
 
-    $startDate = date("d-m-Y H:i:s",strtotime(env('STARTFORM')));
+    $startDate = strtotime(date("d-m-Y H:i:s",strtotime(env('STARTFORM'))));
 
-    $EndDate = date("d-m-Y H:i:s",strtotime(env('ENDFORM')));
+    $EndDate = strtotime(date("d-m-Y H:i:s",strtotime(env('ENDFORM'))));
 
 
 
 
    if($currentDate>$EndDate){
-
        return '<h1 style="text-align:center;margin-top:20px;color:red">দরপত্র দাখিলের সময় শেষ</h1>';
     }
 
