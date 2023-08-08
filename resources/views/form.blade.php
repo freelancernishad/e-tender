@@ -61,6 +61,11 @@ text-align: center;
     border: 1px solid #076633 !important;
 }
 
+.formTitle {
+    color: #1830a7;
+    font-weight: 600;
+}
+
 /*
 .countdown.styled div {
     display: flex;
