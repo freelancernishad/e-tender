@@ -164,7 +164,7 @@ text-align: center;
 
         <div class="col-md-12 mt-3 d-none">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="dorId">দাখিলকৃত দরপত্র নম্বর</label>
+          <label class="mb-1 formTitle"  for="dorId">দাখিলকৃত দরপত্র নম্বর</label>
           <input type="hidden" class="form-control" id="dorId" value="{{ $dorId }}" name="dorId" required>
         </div>
     </div>
@@ -185,7 +185,7 @@ text-align: center;
 {{--
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="email">ইমেইল</label>
+          <label class="mb-1 formTitle"  for="email">ইমেইল</label>
           <input type="email" class="form-control" id="email" name="email" required>
         </div>
     </div> --}}
@@ -193,7 +193,7 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="lotNo">লট নং</label>
+          <label class="mb-1 formTitle"  for="lotNo">লট নং</label>
           <select  id="lotNo" name="lotNo" class="form-control" required>
             <option value="">লট নং নির্বাচন করুন</option>
             <option value="1">১</option>
@@ -206,14 +206,14 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="applicant_orgName">দরপত্র দাখিলকারীর নাম</label>
+          <label class="mb-1 formTitle"  for="applicant_orgName">দরপত্র দাখিলকারীর নাম</label>
           <input type="text" class="form-control" id="applicant_orgName" name="applicant_orgName" required>
         </div>
     </div>
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="applicant_org_fatherName">পিতার নাম</label>
+          <label class="mb-1 formTitle"  for="applicant_org_fatherName">পিতার নাম</label>
           <input type="text" class="form-control" id="applicant_org_fatherName" name="applicant_org_fatherName" required>
         </div>
     </div>
@@ -222,7 +222,7 @@ text-align: center;
 
     <div class="col-md-12 mt-3 ">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="address">ঠিকানা</label>
+          <label class="mb-1 formTitle"  for="address">ঠিকানা</label>
         </div>
 
 
@@ -230,7 +230,7 @@ text-align: center;
 <div class="row">
     <div class="col-md-3 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="vill">গ্রাম</label>
+          <label class="mb-1 formTitle"  for="vill">গ্রাম</label>
           <input type="text" class="form-control" id="addvilless" name="vill" required>
         </div>
     </div>
@@ -238,7 +238,7 @@ text-align: center;
 
     <div class="col-md-3 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="postoffice">ডাকঘর</label>
+          <label class="mb-1 formTitle"  for="postoffice">ডাকঘর</label>
           <input type="text" class="form-control" id="postoffice" name="postoffice" required>
         </div>
     </div>
@@ -246,14 +246,14 @@ text-align: center;
 
     <div class="col-md-3 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="thana">উপজেলা</label>
+          <label class="mb-1 formTitle"  for="thana">উপজেলা</label>
           <input type="text" class="form-control" id="thana" name="thana" required>
         </div>
     </div>
 
     <div class="col-md-3 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="distric">জেলা</label>
+          <label class="mb-1 formTitle"  for="distric">জেলা</label>
           <input type="text" class="form-control" id="distric" name="distric" required>
         </div>
     </div>
@@ -263,14 +263,14 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="mobile">মোবাইল নম্বর</label>
+          <label class="mb-1 formTitle"  for="mobile">মোবাইল নম্বর</label>
           <input type="text" class="form-control" id="mobile" name="mobile" required>
         </div>
     </div>
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="DorAmount">দাখিলকৃত দরের পরিমাণ (টাকা)</label>
+          <label class="mb-1 formTitle"  for="DorAmount">দাখিলকৃত দরের পরিমাণ (টাকা)</label>
           <input type="text" class="form-control" id="DorAmount" name="DorAmount" required>
         </div>
     </div>
@@ -278,7 +278,7 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="DorAmountText">কথায়</label>
+          <label class="mb-1 formTitle"  for="DorAmountText">কথায়</label>
           <input type="text" class="form-control" id="DorAmountText" name="DorAmountText" required>
         </div>
     </div>
@@ -286,19 +286,19 @@ text-align: center;
 
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="depositAmount">৩০% জামানত হিসেবে ব্যাংক ড্রাফট/পে অর্ডারের পরিমাণ (টাকা)</label>
+          <label class="mb-1 formTitle"  for="depositAmount">৩০% জামানত হিসেবে ব্যাংক ড্রাফট/পে অর্ডারের পরিমাণ (টাকা)</label>
           <input type="text" class="form-control" id="depositAmount" name="depositAmount" required>
         </div>
     </div>
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="bank_draft_image">ব্যাংক ড্রাফট/পে-অর্ডারের ছবি আপলোড করুন</label>
+          <label class="mb-1 formTitle"  for="bank_draft_image">ব্যাংক ড্রাফট/পে-অর্ডারের ছবি আপলোড করুন</label>
           <input type="file" class="form-control" id="bank_draft_image" name="bank_draft_image" required>
         </div>
     </div>
     <div class="col-md-12 mt-3">
         <div class="form-group">
-          <label class="mb-1" class="formTitle" for="deposit_details">দরপত্র সিডিউলের ছবি আপলোড করুন</label>
+          <label class="mb-1 formTitle"  for="deposit_details">দরপত্র সিডিউলের ছবি আপলোড করুন</label>
           <input type="file" class="form-control" id="deposit_details" name="deposit_details" required>
         </div>
     </div>
