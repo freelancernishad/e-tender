@@ -194,7 +194,7 @@ text-align: center;
     <div class="col-md-12 mt-3">
         <div class="form-group">
           <label class="mb-1" for="lotNo">লট নং</label>
-          <select  id="lotNo" name="lotNo" required>
+          <select  id="lotNo" name="lotNo" class="form-control" required>
             <option value="">লট নং নির্বাচন করুন</option>
             <option value="1">১</option>
             <option value="2">২</option>
