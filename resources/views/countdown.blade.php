@@ -373,7 +373,7 @@ margin:10px;
     <div class="wrapper" style="line-height: 0;">
         {{-- <h1>Orange</h1> --}}
 
-        <img src="{{ asset('espme.png') }}" alt="">
+        <img src="{{ asset('espme.png?v=1') }}" alt="">
         <br>
         <img src="{{ asset('es-01.png') }}" alt="">
         <br>
