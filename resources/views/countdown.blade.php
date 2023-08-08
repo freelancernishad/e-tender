@@ -398,7 +398,8 @@ margin:10px;
     <img width="500px" src="{{ asset('contin-01.png') }}" alt="">
     <br/>
 
-    <img width="500px" src="{{ asset('documentsup.jpeg') }}" alt="">
+    <a target="_blank" href="{{ asset('Tree Tendar_230805_134515.pdf') }}" > <img width="500px" src="{{ asset('UZ-Tree-Tendar-2_230210_201034.jpg') }}" alt=""></a>
+
     </div>
 
 
