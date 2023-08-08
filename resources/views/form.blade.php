@@ -172,8 +172,8 @@ text-align: center;
     <div class="col-md-12 mt-3 my-3">
 
         {{-- <p>দাখিলকৃত দরপত্র নম্বর: {{ $dorId }}</p> --}}
-        <p>বিজ্ঞপ্তির তারিখ: ০৯/০২/২০২৩</p>
-        <p>স্মারক নং-১২০</p>
+        <p>বিজ্ঞপ্তির তারিখ: ০৩/০৮/২০২৩</p>
+        <p>স্মারক নং- ০৫.৪৭.৭৭৯০.৮৩১.০৫.০৬৫.২২-৬৫৭</p>
         <p>নিলামের বিবরণ- তেঁতুলিয়া উপজেলা পরিষদের নিয়ন্ত্রণাধীন/মালিকানাধীন জায়গায় বিভিন্ন প্রজাতির মরা/ঝড়ে উপড়ে পড়া/ঝুঁকিপূর্ণ/বিনষ্টযোগ্য ৪৫টি গাছ এবং গাছের ডালপালা নিলামে বিক্রয়</p>
 
     </div>
@@ -188,6 +188,19 @@ text-align: center;
           <input type="email" class="form-control" id="email" name="email" required>
         </div>
     </div> --}}
+
+
+    <div class="col-md-12 mt-3">
+        <div class="form-group">
+          <label class="mb-1" for="lotNo">লট নং</label>
+          <select  id="lotNo" name="lotNo" required>
+            <option value="">লট নং নির্বাচন করুন</option>
+            <option value="1">১</option>
+            <option value="2">২</option>
+          </select>
+
+        </div>
+    </div>
 
 
     <div class="col-md-12 mt-3">

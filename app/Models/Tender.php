@@ -10,6 +10,7 @@ class Tender extends Model
     use HasFactory;
     protected $fillable = [
         'dorId',
+        'lotNo',
         'applicant_orgName',
         'applicant_org_fatherName',
         'vill',
